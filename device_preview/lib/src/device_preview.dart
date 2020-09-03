@@ -465,7 +465,6 @@ class DevicePreviewState extends State<DevicePreview> {
                 return MediaQueryObserver(
                   child: Builder(
                     builder: (context) {
-                      _repaintKey = GlobalKey();
                       final style = DevicePreviewTheme.of(context);
                       Widget screen = Container(
                         width: mediaQuery.size.width,
