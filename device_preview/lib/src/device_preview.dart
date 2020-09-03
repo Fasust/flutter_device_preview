@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'dart:math' as math;
+import 'dart:ui' as ui;
 
 import 'package:device_preview/src/keyboard/virtual_keyboard.dart';
 import 'package:device_preview/src/tool_bar/horizontal_toolbar.dart';
@@ -8,14 +10,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'dart:ui' as ui;
-import 'dart:math' as math;
 
 import 'device_preview_data.dart';
 import 'device_preview_style.dart';
 import 'devices/devices.dart';
-import 'locales/locales.dart';
 import 'locales/default_locales.dart';
+import 'locales/locales.dart';
 import 'screenshots/screenshot.dart';
 import 'screenshots/upload_service.dart';
 import 'storage.dart';
@@ -429,7 +429,7 @@ class DevicePreviewState extends State<DevicePreview> {
       locale: _defaultLocale,
     );
 
-    _loadData();
+    //_loadData();
     _onScreenshot = StreamController<DeviceScreenshot>.broadcast();
     super.initState();
   }
